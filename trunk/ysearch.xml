@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+    <ModulePrefs title="Yahoo! Search"
+                 description="Search Yahoo while on iGoogle!"
+                 author="Sam P."
+                 author_email="spullara@yahoo.com"
+                 author_affiliation="Yahoo, Inc."
+                 author_location="Sunnyvale, CA"
+                 category="tools"
+                 screenshot="http://javarants.com/search/images/searchscreenshot.png"
+                 thumbnail="http://javarants.com/search/images/searchscreenshot.png">
+    </ModulePrefs>
+    <Content type="html-inline">
+        <![CDATA[
+        ]]>
+    </Content>
+</Module>
