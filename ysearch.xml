@@ -17,9 +17,7 @@
 <script type="text/javascript">
     _IG_RegisterOnloadHandler(function () {
         // Replace Google search with Yahoo search
-
         _IG_FetchContent("http://ysearch-gadget.googlecode.com/svn/trunk/search.html", callback__MODULE__());
-        init();
     });
     function callback__MODULE__(responseHTML) {
         document.getElementById("gsea").innerHTML = responseHTML;
