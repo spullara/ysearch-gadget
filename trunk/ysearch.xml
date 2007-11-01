@@ -17,11 +17,12 @@
 <script type="text/javascript">
     _IG_RegisterOnloadHandler(function () {
         // Replace Google search with Yahoo search
-        _IG_FetchContent("http://ysearch-gadget.googlecode.com/svn/trunk/search.html", callback__MODULE__());
+        _IG_FetchContent("http://ysearch-gadget.googlecode.com/svn/trunk/search.html", function (responseHTML) {
+            alert(responseHTML);
+            document.getElementById("gsea").innerHTML = responseHTML;
+        });
     });
-    function callback__MODULE__(responseHTML) {
-        document.getElementById("gsea").innerHTML = responseHTML;
-    }
+
 </script>        ]]>
     </Content>
 </Module>
