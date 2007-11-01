@@ -23,68 +23,6 @@
     });
     function callback__MODULE__(responseHTML) {
         document.getElementById("gsea").innerHTML = responseHTML;
-        if (typeof YAHOO == "undefined") {
-            YAHOO = {};
-        }
-        YAHOO.SPLD = {};
-        YAHOO.SPLD.resources = [['http://us.js2.yimg.com/us.js.yimg.com/lib/s3/yschx_200710081225.css','css'],['http://us.js2.yimg.com/us.js.yimg.com/lib/s3/ysch_srp_200710151405.js','js'],['http://us.js2.yimg.com/us.yimg.com/i/us/sch/el/ng_hdspr_1.6v.png','image'],['http://us.js2.yimg.com/us.yimg.com/i/us/sch/gr2/sprt_srp_core_6.gif','image'],['http://us.js2.yimg.com/us.yimg.com/i/us/sch/el/ng_bg.png','image']];
-        YAHOO.SPLD.schbox = document.getElementById("yschsp");
-        YAHOO.SPLD.preloadFlag = 0;
-        YAHOO.SPLD.tmpImage = null;
-        YAHOO.SPLD.CustomFunctions = {preload:function() {
-            var yspld = YAHOO.SPLD;
-            var ysres = yspld.resources;
-            if (yspld.preloadFlag === 1) {
-                return;
-            }
-            yspld.preloadFlag = 1;
-            var newIframe = document.createElement('iframe');
-            newIframe.setAttribute('name', 'hiddenFrame');
-            newIframe.setAttribute('id', 'hiddenFrame');
-            newIframe.style.width = '0px';
-            newIframe.style.height = '0px';
-            newIframe.style.display = 'none';
-            document.body.appendChild(newIframe);
-            var frameHandle = document.getElementById("hiddenFrame");
-            var frameDoc = false;
-            if (frameHandle) {
-                if (frameHandle.contentDocument) frameDoc = frameHandle.contentDocument; else if (frameHandle.contentWindow) frameDoc = frameHandle.contentWindow.document; else frameDoc = frameHandle.document;
-                var frameHead = frameDoc.getElementsByTagName('head')[0];
-                if (!frameHead) {
-                    frameDoc.open();
-                    frameDoc.writeln("<html><head></head></html>");
-                    frameDoc.close();
-                    frameHead = frameDoc.getElementsByTagName('head')[0];
-                }
-                for (var i = 0; i < ysres.length; i++) {
-                    if (ysres[i][0]) {
-                        if (ysres[i][1] === 'image') {
-                            yspld.tmpImage = new Image();
-                            yspld.tmpImage.src = ysres[i][0];
-                        } else if (ysres[i][1] === 'css') {
-                            var newLnk = frameDoc.createElement('link');
-                            newLnk.setAttribute('href', ysres[i][0]);
-                            newLnk.setAttribute('rel', 'stylesheet');
-                            newLnk.setAttribute('type', 'text/css');
-                            newLnk.setAttribute('media', 'all');
-                            frameHead.appendChild(newLnk);
-                        } else if (ysres[i][1] === 'js') {
-                            var scriptNode = frameDoc.createElement('script');
-                            scriptNode.setAttribute('type', 'text/javascript');
-                            scriptNode.setAttribute('src', ysres[i][0]);
-                            frameHead.appendChild(scriptNode);
-                        }
-                    }
-                }
-            }
-        }};
-        if (YAHOO.SPLD.schbox) {
-            if (window.attachEvent) {
-                YAHOO.SPLD.schbox.attachEvent('onkeypress', YAHOO.SPLD.CustomFunctions.preload);
-            } else if (window.addEventListener) {
-                YAHOO.SPLD.schbox.addEventListener("keypress", YAHOO.SPLD.CustomFunctions.preload, false);
-            }
-        }
     }
 </script>        ]]>
     </Content>
