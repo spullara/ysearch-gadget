@@ -18,7 +18,6 @@
     _IG_RegisterOnloadHandler(function () {
         // Replace Google search with Yahoo search
         _IG_FetchContent("http://ysearch-gadget.googlecode.com/svn/trunk/search.html", function (responseHTML) {
-            alert(responseHTML);
             document.getElementById("gsea").innerHTML = responseHTML;
         });
     });
