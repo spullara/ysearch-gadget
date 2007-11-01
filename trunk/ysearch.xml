@@ -14,10 +14,10 @@
         <![CDATA[
 <link rel="stylesheet" type="text/css"
       href="http://us.js2.yimg.com/us.js.yimg.com/lib/s3/ysch_syc_200710041139.css">
-<script src="http://us.js2.yimg.com/us.js.yimg.com/lib/s3/ysch_syc_200710051455.js"></script>
 <script type="text/javascript">
     _IG_RegisterOnloadHandler(function () {
         // Replace Google search with Yahoo search
+
         _IG_FetchContent("http://ysearch-gadget.googlecode.com/svn/trunk/search.html", callback__MODULE__());
         init();
     });
