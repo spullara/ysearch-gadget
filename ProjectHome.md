@@ -1,0 +1,1 @@
+Add this to your iGoogle homepage to use Yahoo Search Assist.
